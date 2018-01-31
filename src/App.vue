@@ -5,7 +5,7 @@
             <a href="">
                <img src="../Appimg/footer1-1.jpg">
                <div>首页</div>
-            </a> 
+            </a>
         </router-link>
         <router-link to="/market">
            <a href="">
@@ -88,5 +88,9 @@ header, footer, article, section, nav, menu, hgroup {display: block;clear:all;}
 }
 .tabbar a div:hover {
   color: #b4282d;
+}
+.tabbar{
+    margin-top: .2rem;
+    z-index: 9;
 }
 </style>
