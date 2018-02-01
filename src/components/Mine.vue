@@ -33,7 +33,7 @@
                     <router-link to='/QQ'>
                         <li><img src="../../Appimg/QQ.png" alt="QQ"> <span>QQ</span></li>
                     </router-link>
-                    <router-link to='/home'>
+                    <router-link to='/weiBo'>
                         <li style="border-right: none;"><img src="../../Appimg/weiBo.png" alt="微博"> <span>微博</span></li>  
                     </router-link>              
                 </ul>
