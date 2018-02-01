@@ -8,14 +8,18 @@
         </div>
         <ul class="qufen">
             <li>推荐区</li>
-            <li>推荐区</li>
-            <li>推荐区</li>
-            <li>推荐区</li>
-            <li>推荐区</li>
-            <li>推荐区</li>
-            <li>推荐区</li>
-            <li>推荐区</li>
-            <li>推荐区</li>
+            <li>个性专区</li>
+            <li>冬季专区</li>
+            <li>居家</li>
+            <li>餐厨</li>
+            <li>配件</li>
+            <li>服装</li>
+            <li>电器</li>
+            <li>洗护</li>
+            <li>杂货</li>
+            <li>饮食</li>
+            <li>婴童</li>
+            <li>志趣</li>            
         </ul>
         <div class="main">
             <div class="main1">

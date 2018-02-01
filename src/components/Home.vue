@@ -241,7 +241,6 @@
             <div class="items hao">
                 <p>更多居家好物</p>
                 <img src="../assets/hxm%2Fyanxuan-wap%2Fp%2F20161201%2Fstyle%2Fimg%2Ficon-normal%2FgoodGridMore-233aaf669a.png" alt="" class="haoimg" style="width: 1rem; margin-left:1.6rem;margin-top:1rem;">
-                <input type="text" name="" value="">
             </div>
         </div>
 
@@ -543,8 +542,8 @@ export default {
 }
 .gaos{
     width: 100%;
-    height: 30rem;
-    background: pink
+    height: 1.3263rem;
+    background: #fff;
 }
 .mou p{
     float: left;
