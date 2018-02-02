@@ -67,6 +67,9 @@ export default {
         padding-top: 5.305rem;
         margin-left: 3.183rem;
     }
+    .gouwu_img p{
+        margin-left: .66313rem;
+    }
     .gouwu_img img{
         width: 3.9788rem;
         height: 3.9788rem;

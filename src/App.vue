@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="tabbar">
+    <div class="tabbar" v-show="isShow">
         <router-link to="/home">
             <a href="">
                <img src="../Appimg/footer1-1.jpg">
@@ -39,10 +39,17 @@ export default {
     HelloWorld
   },
   mounted(){
-			document.documentElement.style.fontSize = innerWidth / 10 + "px";
-			window.onresize = function() {
-				document.documentElement.style.fontSize = innerWidth / 10 + "px";
-			}
+        document.documentElement.style.fontSize = innerWidth / 10 + "px";
+        window.onresize = function() {
+            document.documentElement.style.fontSize = innerWidth / 10 + "px";
+        }
+    },
+    computed: {
+        isShow () {
+            return this.$route.path.indexOf('/mine') == -1 ? true : false
+            // return this.$route.path.indexOf('/Shop') == -2 ? true : false
+            
+        }
     }
 }
 </script>

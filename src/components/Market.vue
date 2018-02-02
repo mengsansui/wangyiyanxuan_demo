@@ -7,19 +7,8 @@
             </div>
         </div>
         <ul class="qufen">
-            <li>推荐区</li>
-            <li>个性专区</li>
-            <li>冬季专区</li>
-            <li>居家</li>
-            <li>餐厨</li>
-            <li>配件</li>
-            <li>服装</li>
-            <li>电器</li>
-            <li>洗护</li>
-            <li>杂货</li>
-            <li>饮食</li>
-            <li>婴童</li>
-            <li>志趣</li>            
+            <li v-for="fen in fenList" 
+                :key="fen.id" >{{ fen.fenName }}</li>         
         </ul>
         <div class="main">
             <div class="main1">
@@ -32,6 +21,19 @@
                     <span></span>
                 </div>
                 <div class="xun">
+                    <div class="" v-for="p in ShopList.itemList" :key="p.Id">
+                        <img :src="p.primaryPicUrl" alt="">
+                        <p>{{ p.name }}</p>
+
+                    </div>
+                    <!-- <div class="">
+                        <img src="../assets/4f361e61751c0b5e5608847c9502e321.png" alt="">
+                        <p>防寒保暖</p>
+                    </div>
+                    <div class="">
+                        <img src="../assets/4f361e61751c0b5e5608847c9502e321.png" alt="">
+                        <p>防寒保暖</p>
+                    </div>
                     <div class="">
                         <img src="../assets/4f361e61751c0b5e5608847c9502e321.png" alt="">
                         <p>防寒保暖</p>
@@ -61,7 +63,6 @@
                     <div class="">
                         <img src="../assets/4f361e61751c0b5e5608847c9502e321.png" alt="">
                         <p>防寒保暖</p>
-
                     </div>
                     <div class="">
                         <img src="../assets/4f361e61751c0b5e5608847c9502e321.png" alt="">
@@ -90,19 +91,7 @@
                     <div class="">
                         <img src="../assets/4f361e61751c0b5e5608847c9502e321.png" alt="">
                         <p>防寒保暖</p>
-                    </div>
-                    <div class="">
-                        <img src="../assets/4f361e61751c0b5e5608847c9502e321.png" alt="">
-                        <p>防寒保暖</p>
-                    </div>
-                    <div class="">
-                        <img src="../assets/4f361e61751c0b5e5608847c9502e321.png" alt="">
-                        <p>防寒保暖</p>
-                    </div>
-                    <div class="">
-                        <img src="../assets/4f361e61751c0b5e5608847c9502e321.png" alt="">
-                        <p>防寒保暖</p>
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -116,8 +105,31 @@ export default {
     name: "market",
     data () {
         return {
-
-        };
+            fenList: [
+                {fenName: '推荐区'},
+                {fenName: '个性专区'},
+                {fenName: '冬季专区'},
+                {fenName: '居家'},
+                {fenName: '餐厨'},
+                {fenName: '配件'},
+                {fenName: '服装'},
+                {fenName: '电器'},
+                {fenName: '洗护'},
+                {fenName: '杂货'},
+                {fenName: '饮食'},
+                {fenName: '婴童'},
+                {fenName: '志趣'}    
+            ],
+            ShopList: []
+        }
+        
+    },
+    created () {
+        this.axios.get('http://localhost:8888/jujia')
+            .then(res => {
+                this.ShopList = res.data.categoryItemList
+                console.log( res.data.categoryItemList);
+        })
     }
 }
 </script>
@@ -244,5 +256,10 @@ export default {
 }
 .xun div p{
     font-size: .35rem;
+}
+.gai{
+    color: red;
+    border-left: .079576rem solid red;
+    font-size: 0.4775rem;
 }
 </style>
