@@ -10,6 +10,7 @@ import Home from '../components/Home'
 import Market from '../components/Market'
 import Cart from '../components/Cart'
 import Mine from '../components/Mine'
+import Shop from "../components/Shop"
 // 登录页
 import YouXiang from '../components/dengLuYe/youXiang'
 import QQ from '../components/dengLuYe/QQ'
@@ -34,5 +35,6 @@ export default new VueRouter({
     { path: '/QQ', component: QQ },
     { path: '/weiBo', component: WeiBo },
     { path: '/ChengGong', component: ChengGong },
+    { path: '/Shop', component: Shop },
   ]
 })
