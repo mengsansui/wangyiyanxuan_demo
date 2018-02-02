@@ -105,6 +105,7 @@
         </div>
         <div class="item">
             <div class="ittem">
+                <router-link to="/shop">
                 <div class="items">
                     <img src="../assets/9cdfe68cd1aad448df240c9899279824.png" alt="">
                     <span class="bao">爆品</span>
@@ -113,6 +114,7 @@
                     <p class="qiudong">秋冬脱不掉的温暖随行</p>
                     <p class="jiage">￥249</p>
                 </div>
+            </router-link>
                 <div class="items">
                     <img src="../assets/8319d7be7b6c4f1654535aa9c80931b5.png" alt="">
                     <span class="bao">爆品</span>

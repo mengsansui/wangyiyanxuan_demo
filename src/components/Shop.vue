@@ -1,7 +1,7 @@
 <template>
     <div class="shop">
         <div class="mine_top">
-            <router-link to='/shop'>
+            <router-link to='/home'>
                 <img src="../../Appimg/top_06.png" alt="回到主页" style="margin-left:   .265252rem">
             </router-link>
              <h2><img src="../../Appimg/top_02.png" alt=""></h2>
