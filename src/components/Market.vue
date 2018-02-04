@@ -7,8 +7,11 @@
             </div>
         </div>
         <ul class="qufen">
-            <li v-for="fen in fenList" 
-                :key="fen.id" >{{ fen.fenName }}</li>         
+            <li v-for="(fen, index) in fenList" 
+                :key="fen.id" 
+                :class="{'gai':styles === index}"
+                @click="change(index)">{{ fen.fenName }}
+            </li>  
         </ul>
         <div class="main">
             <div class="main1">
@@ -21,7 +24,8 @@
                     <span></span>
                 </div>
                 <div class="xun">
-                    <div class="" v-for="p in ShopList.itemList" :key="p.Id">
+                    <div class="" v-for="p in ShopList.itemList" 
+                            :key="p.Id">
                         <img :src="p.primaryPicUrl" alt="">
                         <p>{{ p.name }}</p>
 
@@ -116,13 +120,21 @@ export default {
                 {fenName: '电器'},
                 {fenName: '洗护'},
                 {fenName: '杂货'},
-                {fenName: '饮食'},
                 {fenName: '婴童'},
+                {fenName: '饮食'},
                 {fenName: '志趣'}    
             ],
-            ShopList: []
+            ShopList:[],
+           	isTrue:true,
+         	styles:''
         }
         
+    },
+    methods:{
+        change (index) {
+            this.styles = index;
+
+        }
     },
     created () {
         this.axios.get('http://localhost:8888/jujia')
