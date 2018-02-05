@@ -12,98 +12,89 @@
             </div>
             <div class="list">
                 <div class="litt">
-
-
-                <div class="">
-                    推荐
+                    <div class="" v-for="(h,index) in HomeList" :key="h.Id"
+                            :class="{'littGai':styles === index}" 
+                            @click="changes(index)">
+                        {{ h.HomeName }}
+                    </div>
+                    <!-- <div class="">
+                        居家
+                    </div>
+                    <div class="">
+                        餐厨
+                    </div>
+                    <div class="">
+                        配件
+                    </div>
+                    <div class="">
+                        服装
+                    </div>
+                    <div class="">
+                        推荐
+                    </div>
+                    <div class="">
+                        推荐
+                    </div>
+                    <div class="">
+                        推荐
+                    </div> -->
                 </div>
-                <div class="">
-                    居家
-                </div>
-                <div class="">
-                    餐厨
-                </div>
-                <div class="">
-                    配件
-                </div>
-                <div class="">
-                    服装
-                </div>
-                <div class="">
-                    推荐
-                </div>
-                <div class="">
-                    推荐
-                </div>
-                <div class="">
-                    推荐
-                </div>
-                </div>
-
             </div>
-
         </div>
         <div class="main">
-
-
-        <div class="m-indexFloor">
-            <img src="../assets/88f5dcaf804927e74a22fcf75b99d2a3.jpg" alt="">
-        </div>
-        <div class="m-indexServicePolicy">
-            <div class="">
-                <img src="../assets/cae45612b8aae577d8bd73338e2fc02c (1).png" alt="">
-                <p>网易自营品牌</p>
+            <div class="m-indexFloor">
+                <img src="../assets/88f5dcaf804927e74a22fcf75b99d2a3.jpg" alt="">
             </div>
-            <div class="">
-                <img src="../assets/cae45612b8aae577d8bd73338e2fc02c (1).png" alt="">
-                <p>30天无忧退货</p>
+            <div class="m-indexServicePolicy">
+                <div class="">
+                    <img src="../assets/cae45612b8aae577d8bd73338e2fc02c (1).png" alt="">
+                    <p>网易自营品牌</p>
+                </div>
+                <div class="">
+                    <img src="../assets/cae45612b8aae577d8bd73338e2fc02c (1).png" alt="">
+                    <p>30天无忧退货</p>
+                </div>
+                <div class="">
+                    <img src="../assets/cae45612b8aae577d8bd73338e2fc02c (1).png" alt="">
+                    <p>48小时快速退款</p>
+                </div>
             </div>
-            <div class="">
-                <img src="../assets/cae45612b8aae577d8bd73338e2fc02c (1).png" alt="">
-                <p>48小时快速退款</p>
-            </div>
+            <div class="bai"></div>
+            <div class="m-indexManufacturersSupplying">
+                <div class="mt">
+                    <p>品牌制造商直供</p>
+                    <img src="../assets/3.png" alt="">
+                </div>
+                <div class="mtzuo">
+                    <p class="p1">Nine West制造商</p>
+                    <p class="p2">199元起</p>
 
-        </div>
-        <div class="bai">
+                    <img src="../assets/b6b1daf5922e2b0d9651149cb07e5266.png" alt="">
+                </div>
+                <div class="mtyou">
+                    <p class="p1">新秀丽制造商</p>
+                    <p class="p2">49元起</p>
 
-        </div>
-        <div class="m-indexManufacturersSupplying">
-            <div class="mt">
-                <p>品牌制造商直供</p>
-                <img src="../assets/3.png" alt="">
-            </div>
-            <div class="mtzuo">
-                <p class="p1">Nine West制造商</p>
-                <p class="p2">199元起</p>
+                    <img src="../assets/f57d460dde6e737f2bacd9f67cb73a41.png" alt="">
+                </div>
+                <div class="mtzuo">
+                    <p class="p1">CK制造商</p>
+                    <p class="p2">25元起</p>
 
-                <img src="../assets/b6b1daf5922e2b0d9651149cb07e5266.png" alt="">
+                    <img src="../assets/bcca932aeb9d818dcf6d3a4804f7311b.png" alt="">
+                </div>
+                <div class="mtyou">
+                    <p class="p1">Palph Lauren制造商</p>
+                    <p class="p2">19元起</p>
+                    <img src="../assets/7e2967f5278d44ee3fdf859224485a8f.png" alt="">
+                </div>
             </div>
-            <div class="mtyou">
-                <p class="p1">新秀丽制造商</p>
-                <p class="p2">49元起</p>
-
-                <img src="../assets/f57d460dde6e737f2bacd9f67cb73a41.png" alt="">
+            <div class="bai"></div>
+            <div class="hd">
+                <p class="xinpin">周一周四 · 新品首发</p>
+                <p class="chakan">查看全部</p>
             </div>
-            <div class="mtzuo">
-                <p class="p1">CK制造商</p>
-                <p class="p2">25元起</p>
-
-                <img src="../assets/bcca932aeb9d818dcf6d3a4804f7311b.png" alt="">
-            </div>
-            <div class="mtyou">
-                <p class="p1">Palph Lauren制造商</p>
-                <p class="p2">19元起</p>
-                <img src="../assets/7e2967f5278d44ee3fdf859224485a8f.png" alt="">
-            </div>
-        </div>
-        <div class="bai">
-
-        </div>
-        <div class="hd">
-            <p class="xinpin">周一周四 · 新品首发</p>
-            <p class="chakan">查看全部</p>
-        </div>
-        <div class="item">
+         <div class="item">
             <div class="ittem">
                 <router-link to="/shop">
                 <div class="items">
@@ -263,9 +254,29 @@ export default {
     name: "home",
     data () {
         return {
-
+             HomeList: [
+                { HomeName: '推荐'},
+                { HomeName: '居家'},
+                { HomeName: '餐厨'},
+                { HomeName: '配件'},
+                { HomeName: '服装'},
+                { HomeName: '电器'},
+                { HomeName: '洗护'},
+                { HomeName: '杂货'},
+                { HomeName: '饮食'},
+                { HomeName: '婴童'},
+                { HomeName: '志趣'}
+            ],
+            isTrue:true,
+            styles:''
         };
-    }
+    },
+     methods:{
+        changes(index) {
+            this.styles = index;
+
+        }
+    },
 }
 </script>
 
@@ -330,8 +341,7 @@ export default {
     margin-bottom: .2rem; */
 }
 .litt{
-    width: 300%;
-
+    width: 190%;
     overflow: hidden;
 }
 .litt div{
@@ -346,6 +356,10 @@ export default {
 }
 .litt div:hover{
     color: #b4282d;
+}
+.littGai{
+    color: #b4282d;
+    border-bottom:  0.0531rem solid #b4282d;
 }
 .main{
     position: absolute;
